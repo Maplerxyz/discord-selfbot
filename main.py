@@ -111,7 +111,7 @@ async def wizz(ctx):
                     value="Spams a message and amount given #",
                     inline=False)
     embed.add_field(name="dm",
-                    value="Dm alls everyone on your friendslist",
+                    value="Dms everyone on your friendslist",
                     inline=False)
     embed.set_thumbnail(url=ctx.author.avatar_url)
     embed.set_footer(text=f"Requested By {ctx.author}")
@@ -153,7 +153,7 @@ async def status(ctx):
                     value="Sets custom status to streaming",
                     inline=False)
     embed.add_field(name="game",
-                    value="Sets custom status to streaming",
+                    value="Sets custom status to playing",
                     inline=False)
     embed.set_thumbnail(url=ctx.author.avatar_url)
     embed.set_footer(text=f"Requested By {ctx.author}")
