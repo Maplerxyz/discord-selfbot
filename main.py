@@ -164,7 +164,7 @@ async def status(ctx):
 async def ping(ctx):
     embed = discord.Embed(
         title="Ping",
-        description=f"Booster SB Ping : {round(maplerxyz.latency * 1000)}ms",
+        description=f"Maplerxyz's Selfbot by Mapler#4986: {round(maplerxyz.latency * 1000)}ms",
         colour=discord.Colour.dark_purple())
     await ctx.send(embed=embed)
 
