@@ -1,6 +1,8 @@
 # Mapler's Discord Selfbot
 This is a selfbot I made for my Discord community a while back that I decided to revamp. This bot was made in Discord.py and contains some nuke, fun and info commands. Don't worry though, more moden day feautres like urban dictonary search and much more. If you wish to use this, please star this and make some contributions to further support the project.
 
+Please note that the use of selfbots or other software used to automate Discord is against Discord's Terms Of Service. By using this code, you agree that I (Maplerxyz) am not resposible for your account being banned or any other action taken against you. Don't say dumb things, Discord won't ban you if you don't go in huge servers or untrusted peoples dms telling them that you selfbot.
+
 ## Command List
 
 ### Nuke
