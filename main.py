@@ -205,4 +205,12 @@ async def dm(ctx):
         except:
             print(f"couldnt message: {user.friends}")
 
+for file in os.listdir("./cogs"):
+    if file.endswith(".py"):
+        try:
+            maplerxyz.load_extension(f"cogs.{file[:-3]}")
+        except Exception as e:
+            print(e)
+
+
 maplerxyz.run(token, bot=False)
