@@ -20,11 +20,10 @@ Please note that the use of selfbots or other software used to automate Discord 
 - Ping (Returns SB Ping)
 - Gcleave (Leaves all the group chats you are in.)
 - Stopsb (Shuts down selfbot)
+- Bump (Bump's disboard every 2 hours)
 
 ### Fun
 - Coinflip (Flips a coin)
-- Bump (Bump's disboard every 2 hours)
-
 **(MORE COMING SOON)**
 
 ### Status

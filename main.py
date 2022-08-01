@@ -4,10 +4,10 @@ import random
 from discord import Permissions
 from colorama import Fore, Style
 import asyncio
+import schedule 
 from discord.ext.commands import has_permissions
 from colorama import Fore as Color
 import os
-import time
 from dotenv import load_dotenv
 from datetime import datetime
 from time import time
@@ -130,6 +130,7 @@ async def utility(ctx):
     embed.add_field(name="ping", value="Returns SB Ping", inline=False)
     embed.add_field(name="stopsb", value="Shuts down selfbot", inline=False)
     embed.add_field(name="gcleave", value="Leaves all the group chats you are in.", inline=False)
+    embed.add_field(name="bump", value="Bump's disboard every 2 hours", inline=False)
     embed.set_thumbnail(url=ctx.author.avatar_url)
     embed.set_footer(text=f"Requested By {ctx.author}")
     await ctx.send(embed=embed)
@@ -141,7 +142,6 @@ async def fun(ctx):
                           description="Displays fun commands",
                           colour=discord.Colour.dark_purple())
     embed.add_field(name="coinflip", value="Flips a coin", inline=False)
-    embed.add_field(name="bump", value="Bump's disboard every 2 hours", inline=False)
     embed.set_thumbnail(url=ctx.author.avatar_url)
     embed.set_footer(text=f"Requested By {ctx.author}")
     await ctx.send(embed=embed)
@@ -181,11 +181,10 @@ async def coinflip(ctx):
 
 @maplerxyz.command()
 async def bump(ctx):
-    while True:
         await ctx.send("!d bump")
-        time.sleep(8125)
+        schedule.every(2).hours.do(bump)
 
-@maplerxyz.command
+@maplerxyz.command()
 async def gcleave(ctx):
     for gc in maplerxyz.private_channels:
         if isinstance(gc, discord.GroupChannel):
