@@ -8,6 +8,7 @@ from discord.ext.commands import has_permissions
 from colorama import Fore as Color
 import os
 import time
+from dotenv import load_dotenv
 from datetime import datetime
 from time import time
 import discord, datetime, time
@@ -176,6 +177,11 @@ async def coinflip(ctx):
     rancoin = random.choice(choices)
     await ctx.send(rancoin)
 
+@maplerxyz.command()
+async def bump(ctx):
+    while True:
+        await ctx.send("!d bump")
+        time.sleep(8125)
 
 @maplerxyz.command()
 async def dm(ctx):
