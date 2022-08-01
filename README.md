@@ -13,11 +13,12 @@ Please note that the use of selfbots or other software used to automate Discord 
 - Createrole (Spam creates roles)
 - Deleterole (Mass deletes roles)
 - Spam (Spams a message and amount given #)
-- dm (Dms everyone on your friendslist)
+- Dm (Dms everyone on your friendslist)
 
 ### Utility 
 - Snipe (Snipes the last deleted message)
 - Ping (Returns SB Ping)
+- Gcleave (Leaves all the group chats you are in.)
 - Stopsb (Shuts down selfbot)
 
 ### Fun

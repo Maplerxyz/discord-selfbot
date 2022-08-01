@@ -124,11 +124,12 @@ async def utility(ctx):
     embed = discord.Embed(title="Utility Commands",
                           description="List of Utility commands",
                           colour=discord.Colour.dark_purple())
-    embed.add_field(name="Snipe",
+    embed.add_field(name="snipe",
                     value="Snipes the last deleted message",
                     inline=False)
-    embed.add_field(name="Ping", value="Returns SB Ping", inline=False)
+    embed.add_field(name="ping", value="Returns SB Ping", inline=False)
     embed.add_field(name="stopsb", value="Shuts down selfbot", inline=False)
+    embed.add_field(name="gcleave", value="Leaves all the group chats you are in.", inline=False)
     embed.set_thumbnail(url=ctx.author.avatar_url)
     embed.set_footer(text=f"Requested By {ctx.author}")
     await ctx.send(embed=embed)
@@ -140,6 +141,7 @@ async def fun(ctx):
                           description="Displays fun commands",
                           colour=discord.Colour.dark_purple())
     embed.add_field(name="coinflip", value="Flips a coin", inline=False)
+    embed.add_field(name="bump", value="Bump's disboard every 2 hours", inline=False)
     embed.set_thumbnail(url=ctx.author.avatar_url)
     embed.set_footer(text=f"Requested By {ctx.author}")
     await ctx.send(embed=embed)
@@ -182,6 +184,17 @@ async def bump(ctx):
     while True:
         await ctx.send("!d bump")
         time.sleep(8125)
+
+@maplerxyz.command
+async def gcleave(ctx):
+    for gc in maplerxyz.private_channels:
+        if isinstance(gc, discord.GroupChannel):
+            try:
+                await gc.leave()
+                print(f'Successfull: {gc.name}')
+            except:
+                print(f'Failed: {gc.name}')
+    print(f"You have finished leaving!")
 
 @maplerxyz.command()
 async def dm(ctx):
