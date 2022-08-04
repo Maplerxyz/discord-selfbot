@@ -181,8 +181,8 @@ async def coinflip(ctx):
 
 @maplerxyz.command()
 async def bump(ctx):
-        await ctx.send("!d bump")
-        schedule.every(2).hours.do(bump)
+        await ctx.send("**Hi there!** Sorry but this command is currently unavailable due to Disboard moving to slash commands. Please try again later.")
+       
 
 @maplerxyz.command()
 async def gcleave(ctx):
